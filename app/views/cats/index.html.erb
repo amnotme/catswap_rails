@@ -1,0 +1,20 @@
+<section class="cat-index-holder">
+	<nav>
+		<h1>ALL OF THE CATS IN THE WORLD</h1>
+		<a href="<%= new_cat_url %>">
+			Do You Have a Cat to Rent?
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</a>
+	</nav>
+	<section class="cat-index">
+		<% @cats.each do |cat| %>
+			<div class="cat-index-item">
+				<a href="<%=cat_url(cat)%>"><div>
+					<!-- image below is a placeholder. TODO: user submitted images in database -->
+					<img src="http://placekitten.com/g/231/231" >
+					<br /><%="#{cat.name}"%>
+				</div></a>
+			</div>
+		<% end %>
+	</section>
+</section>
